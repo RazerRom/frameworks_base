@@ -390,7 +390,7 @@ public class AccountManagerService
             boolean accountDeleted = false;
             Cursor cursor = null;
             try {
-                cursor = db.query(TABLE_ACCOUNTS,
+				cursor = db.query(TABLE_ACCOUNTS,
                     new String[]{ACCOUNTS_ID, ACCOUNTS_TYPE, ACCOUNTS_NAME},
                     null, null, null, null, ACCOUNTS_ID);
 
