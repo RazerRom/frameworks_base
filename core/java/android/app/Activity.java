@@ -104,7 +104,7 @@ import android.view.accessibility.AccessibilityEvent;
 import android.widget.AdapterView;
 import android.widget.FrameLayout;
 
-import com.android.internal.util.bliss.ColorUtils;
+import com.android.internal.util.razer.ColorUtils;
 
 import java.io.FileDescriptor;
 import java.io.PrintWriter;

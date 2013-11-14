@@ -58,7 +58,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.SpinnerAdapter;
 import android.widget.TextView;
 
-import com.android.internal.util.bliss.ColorUtils;
+import com.android.internal.util.razer.ColorUtils;
 
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
