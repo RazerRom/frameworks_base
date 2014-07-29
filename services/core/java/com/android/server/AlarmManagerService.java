@@ -87,6 +87,10 @@ class AlarmManagerService extends SystemService {
 
     // Minimum alarm recurrence interval
     private static final long MIN_INTERVAL = 60 * 1000;  // one minute, in millis
+    
+    // The threshold for the power off alarm time can be set. The time
+    // duration is in milliseconds.
+    private static final long POWER_OFF_ALARM_THRESHOLD = 120 * 1000;
 
     private static final int RTC_WAKEUP_MASK = 1 << RTC_WAKEUP;
     private static final int RTC_MASK = 1 << RTC;
