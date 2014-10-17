@@ -592,7 +592,8 @@ public class UsbDeviceManager {
         private void updateUsbState() {
             // send a sticky broadcast containing current USB state
             Intent intent = new Intent(UsbManager.ACTION_USB_STATE);
-            intent.addFlags(Intent.FLAG_RECEIVER_REPLACE_PENDING);
+            intent.addFlags(Intent.FLAG_RECEIVER_REPLACE_PENDING
+                   | Intent.FLAG_RECEIVER_FOREGROUND);
             intent.putExtra(UsbManager.USB_CONNECTED, mConnected);
             intent.putExtra(UsbManager.USB_CONFIGURED, mConfigured);
 
