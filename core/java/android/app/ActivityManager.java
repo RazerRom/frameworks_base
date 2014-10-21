@@ -526,13 +526,6 @@ public class ActivityManager {
     }
 
     /**
-     * @hide
-     */
-    public static boolean isForcedHighEndGfx() {
-        return SystemProperties.getBoolean("persist.sys.force_highendgfx", false);
-    }
-
-    /**
      * Return the maximum number of recents entries that we will maintain and show.
      * @hide
      */
