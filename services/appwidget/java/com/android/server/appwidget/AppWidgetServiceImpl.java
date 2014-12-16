@@ -17,6 +17,7 @@
 package com.android.server.appwidget;
 
 import android.app.AlarmManager;
+import android.app.ActivityManagerNative;
 import android.app.AppGlobals;
 import android.app.AppOpsManager;
 import android.app.PendingIntent;
@@ -1882,12 +1883,20 @@ class AppWidgetServiceImpl extends IAppWidgetService.Stub implements WidgetBacku
     }
 
     private void sendEnableIntentLocked(Provider p) {
+        if(!ActivityManagerNative.isSystemReady()) {
+            Slog.w(TAG,"Do not send the enable intent to " + p.info.provider + " since the system is not ready!");
+            return;
+        }
         Intent intent = new Intent(AppWidgetManager.ACTION_APPWIDGET_ENABLED);
         intent.setComponent(p.info.provider);
         sendBroadcastAsUser(intent, p.info.getProfile());
     }
 
     private void sendUpdateIntentLocked(Provider provider, int[] appWidgetIds) {
+        if(!ActivityManagerNative.isSystemReady()) {
+            Slog.w(TAG,"Do not send the update intent to " + provider.info.provider + " since the system is not ready!");
+            return;
+        }
         Intent intent = new Intent(AppWidgetManager.ACTION_APPWIDGET_UPDATE);
         intent.putExtra(AppWidgetManager.EXTRA_APPWIDGET_IDS, appWidgetIds);
         intent.setComponent(provider.info.provider);
