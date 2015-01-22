@@ -8507,7 +8507,7 @@ public final class Settings {
         /**
          * Defines global runtime overrides to window policy.
          *
-         * See {@link android.view.WindowManagerPolicyControl} for value format.
+         * See {@link com.android.internal.policy.impl.PolicyControl} for value format.
          *
          * @hide
          */
