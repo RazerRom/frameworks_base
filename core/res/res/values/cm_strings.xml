@@ -204,9 +204,6 @@
     <!-- Shown in the lock screen to tell the user that phone is in airplane mode-->
     <string name="lockscreen_airplane_mode_on">Airplane Mode</string>
 
-    <!-- USB_PREFERENCES: Notification for when the user connects the phone to a computer via USB in CHARGING mode.  This is the title -->
-    <string name="usb_charging_notification_title">Connected in charging mode</string>
-
     <!-- Shown when the device is tethered -->
     <string name="tethered_notification_no_device_message">No connected device</string>
     <string name="tethered_notification_one_device_message"><xliff:g id="count">%1$s</xliff:g> connected device</string>
