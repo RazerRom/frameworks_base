@@ -20,8 +20,8 @@
     <!-- The text for the button in the notification window-shade that clears
          all of the currently visible notifications. [CHAR LIMIT=10]-->
 	 
-    <!-- Bliss -->
-    <string name="bliss">BLISS</string>	 
+    <!-- BlissGM -->
+    <string name="bliss">Welcome to BlissGM</string>	 
     
     <!-- Heads up -->
     <string name="heads_up_snooze_message">Heads up is disabled for <xliff:g id="number">%d</xliff:g> minutes.</string>
