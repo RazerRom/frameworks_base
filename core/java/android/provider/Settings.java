@@ -261,7 +261,6 @@ public final class Settings {
      * Input: Nothing.
      * <p>
      * Output: Nothing.
-
      */
     @SdkConstant(SdkConstantType.ACTIVITY_INTENT_ACTION)
     public static final String ACTION_WIFI_SETTINGS =
@@ -2734,10 +2733,10 @@ public final class Settings {
         public static final String TIME_12_24 = "time_12_24";
 
         /**
-        * Developer options - Navigation Bar show switch
-        * @hide
-        */
-        public static final String DEV_FORCE_SHOW_NAVBAR = "dev_force_show_navbar";
+         * Wether navigation bar is enabled or not
+         * @hide
+         */
+        public static final String NAVIGATION_BAR_SHOW = "navigation_bar_show";
 
 
         /**
@@ -2764,7 +2763,13 @@ public final class Settings {
          */
         public static final String ANIMATION_IME_INTERPOLATOR = "animation_ime_interpolator";
 
-	    /**
+        /**
+         * Enable HW keys
+         * @hide
+         */
+        public static final String ENABLE_HW_KEYS = "enable_hw_keys";
+		
+        /**
          * Whether navigation bar is placed on the left side in landscape mode
          * @hide
          */
@@ -2842,7 +2847,6 @@ public final class Settings {
         /**
          * Determine custom overscroll distance.
          * @hide
-
          * Wether to show the ticker on the status bar
          * @hide
          */
@@ -3411,92 +3415,6 @@ public final class Settings {
          * @hide
          */
         public static final String LOCK_SCREEN_ICON_COLOR = "lock_screen_icon_color";
-
-        /**
-         *
-         * @hide
-         */
-        public static final String NAVIGATION_BAR_BUTTONS = "navigation_bar_buttons";
-
-        /**
-         * @hide
-         */
-        public static final String NAVIGATION_BAR_HEIGHT_LANDSCAPE = "navigation_bar_height_landscape";
-
-        /**
-         * @hide
-         */
-        public static final String NAVIGATION_BAR_HEIGHT = "navigation_bar_height";
-
-        /**
-         * @hide
-         */
-        public static final String NAVIGATION_BAR_WIDTH = "navigation_bar_width";
-		
-        /**
-         * Navigation bar button color
-         * @hide
-         */
-        public static final String NAVIGATION_BAR_TINT = "navigation_bar_tint";
-
-        /**
-         * @hide
-         */
-        public static final String SOFTKEY_LONG_PRESS_CONFIGURATION = "softkey_long_press_configuration";
-
-        /**
-         * Alternate navigation bar layouts
-         * @hide
-         */
-        public static final String NAVIGATION_BAR_ALTERNATE_LAYOUTS = "navigation_bar_alternate_layouts";
-
-        /**
-         * Alternate layout 2
-         * @hide
-         */
-        public static final String NAVIGATION_BAR_BUTTONS_TWO = "navigation_bar_buttons_two";
-
-        /**
-         * Alternate layout 3
-         * @hide
-         */
-        public static final String NAVIGATION_BAR_BUTTONS_THREE = "navigation_bar_buttons_three";
-
-        /**
-         * Alternate layout 4
-         * @hide
-         */
-        public static final String NAVIGATION_BAR_BUTTONS_FOUR = "navigation_bar_buttons_four";
-
-        /**
-         * Alternate layout 5
-         * @hide
-         */
-        public static final String NAVIGATION_BAR_BUTTONS_FIVE = "navigation_bar_buttons_five";
-
-        /**
-         * Allow navigation bar side keys
-         * @hide
-         */
-        public static final String NAVIGATION_BAR_SIDEKEYS = "navigation_bar_sidekeys";
-
-        /**
-         * Allow navigation bar IME arrow keys
-         * @hide
-         */
-        public static final String NAVIGATION_BAR_ARROWS = "navigation_bar_arrows";
-
-        /**
-         * Button layout for IME arrows
-         * @hide
-         */
-        public static final String NAVIGATION_IME_LAYOUT = "navigation_ime_layout";
-
-        /**
-         * Toggle for navigation ring
-         * @hide
-         */
-        public static final String ENABLE_NAVIGATION_RING = "enable_navigation_ring";
 
         /**
          * Enable/Disable screenshot sound
