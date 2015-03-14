@@ -466,7 +466,7 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
                     false, this, UserHandle.USER_ALL);
             resolver.registerContentObserver(Settings.System.getUriFor(
                     Settings.System.LOCK_SCREEN_ICON_COLOR),
-                    false, this, UserHandle.USER_ALL);	
+                    false, this, UserHandle.USER_ALL);
             resolver.registerContentObserver(Settings.System.getUriFor(
                     Settings.System.STATUS_BAR_BRIGHTNESS_CONTROL),
                     false, this, UserHandle.USER_ALL);
@@ -508,7 +508,7 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
                     false, this, UserHandle.USER_ALL);
             resolver.registerContentObserver(Settings.System.getUriFor(
                     Settings.System.STATUS_BAR_GREETING),
-                    false, this, UserHandle.USER_ALL);		
+                    false, this, UserHandle.USER_ALL);
             resolver.registerContentObserver(Settings.System.getUriFor(
                     Settings.System.STATUS_BAR_GREETING_TIMEOUT),
                     false, this, UserHandle.USER_ALL);
@@ -1129,7 +1129,6 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
                         mDozeServiceHost.firePowerSaveChanged(mBatteryController.isPowerSave());
                     }
                 }
-            }
 
                 @Override
                 public void onBatteryLevelChanged(int level, boolean pluggedIn, boolean charging) {
@@ -4099,6 +4098,7 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
         });
         // restart the keyguard so it picks up the newly created ScrimController
         startKeyguard();
+
         // if the keyguard was showing while this change occurred we'll need to do some extra work
         if (mState == StatusBarState.KEYGUARD) {
             // this will make sure the keyguard is showing
@@ -4106,8 +4106,8 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
             // The following views need to be invisible if the keyguard is showing
             // These views were hidden but re-inflating the status bar changed them back to visible
             mShowLabel = false;
-	    mTickerView.setVisibility(View.INVISIBLE);
-	    mCarrierLabel.setVisibility(View.INVISIBLE);
+            mTickerView.setVisibility(View.INVISIBLE);
+            mCarrierLabel.setVisibility(View.INVISIBLE);
             mHeadsUpNotificationView.setVisibility(View.INVISIBLE);
             mBatteryView.setVisibility(View.INVISIBLE);
             mCenterClockLayout.setVisibility(View.INVISIBLE);
@@ -4191,12 +4191,12 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
         if (newTheme == null) return false;
         if (oldTheme == null) return true;
 
-        final String overlay = newTheme.getOverlayForStatusBar();
-        final String icons = newTheme.getIconPackPkgName();
-        final String fonts = newTheme.getFontPkgName();
+        final String overlay    = newTheme.getOverlayForStatusBar();
+        final String icons      = newTheme.getIconPackPkgName();
+        final String fonts      = newTheme.getFontPkgName();
         final String oldoverlay = oldTheme.getOverlayForStatusBar();
-        final String oldfonts = oldTheme.getFontPkgName();
-        final String oldicons = oldTheme.getIconPackPkgName();
+        final String oldfonts   = oldTheme.getFontPkgName();
+        final String oldicons   = oldTheme.getIconPackPkgName();
 
         return (overlay != null && (oldoverlay == null || !overlay.equals(oldoverlay))) ||
                (fonts != null && (oldfonts == null || !fonts.equals(oldfonts))) ||
