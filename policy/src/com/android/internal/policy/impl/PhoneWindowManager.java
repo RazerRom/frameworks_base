@@ -7144,7 +7144,7 @@ public class PhoneWindowManager implements WindowManagerPolicy {
 
     @Override
     public void keepScreenOnStoppedLw() {
-        if (isKeyguardShowingAndNotOccluded()) {
+        if (!isKeyguardShowingAndNotOccluded()) {
             mPowerManager.userActivity(SystemClock.uptimeMillis(), false);
         }
     }
