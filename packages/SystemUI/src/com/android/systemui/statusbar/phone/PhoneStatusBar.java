@@ -227,6 +227,7 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
     private static final int MSG_OPEN_NOTIFICATION_PANEL = 1000;
     private static final int MSG_CLOSE_PANELS = 1001;
     private static final int MSG_OPEN_SETTINGS_PANEL = 1002;
+    private static final int MSG_UPDATE_NOTIFICATIONS = 1003;
     // 1020-1040 reserved for BaseStatusBar
 
     private static final boolean CLOSE_PANEL_WHEN_EMPTIED = true;
@@ -1994,17 +1995,24 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
         mStackScroller.updateSpeedBumpIndex(speedbumpIndex);
     }
 
-    @Override
-    protected void updateNotifications() {
+    private void handleUpdateNotifications() {
+        // TODO: Move this into updateNotificationIcons()?
+        if (mNotificationIcons == null) return;
+
         mNotificationData.filterAndSort();
 
         updateNotificationShade();
         updateNotificationIcons();
     }
 
-    private void updateNotificationIcons() {
-        if (mNotificationIcons == null) return;
+    @Override
+    protected void updateNotifications() {
+        if (!mHandler.hasMessages(MSG_UPDATE_NOTIFICATIONS)) {
+            mHandler.sendEmptyMessage(MSG_UPDATE_NOTIFICATIONS);
+        }
+    }
 
+    private void updateNotificationIcons() {
         final LinearLayout.LayoutParams params
             = new LinearLayout.LayoutParams(mIconSize + 2*mIconHPadding, mNaturalBarHeight);
 
@@ -2753,6 +2761,9 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
                 case MSG_ESCALATE_HEADS_UP:
                     escalateHeadsUp();
                     setHeadsUpVisibility(false);
+                    break;
+                case MSG_UPDATE_NOTIFICATIONS:
+                    handleUpdateNotifications();
                     break;
             }
         }
