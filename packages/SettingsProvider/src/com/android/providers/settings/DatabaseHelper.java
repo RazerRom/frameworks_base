@@ -2504,15 +2504,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
             loadIntegerSetting(stmt, Settings.System.STATUS_BAR_SHOW_NOTIF_COUNT,
                     R.integer.def_notif_count);
-                    
-            loadIntegerSetting(stmt, Settings.System.ENABLE_FORWARD_LOOKUP,
-                    R.integer.def_forward_lookup);
 
             loadIntegerSetting(stmt, Settings.System.ENABLE_PEOPLE_LOOKUP,
                     R.integer.def_people_lookup);
-                    
-            loadIntegerSetting(stmt, Settings.System.ENABLE_REVERSE_LOOKUP,
-                    R.integer.def_reverse_lookup);
 
             loadIntegerSetting(stmt, Settings.System.QS_QUICK_PULLDOWN,
                     R.integer.def_qs_quick_pulldown);
