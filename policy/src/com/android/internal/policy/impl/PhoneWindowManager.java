@@ -7001,13 +7001,13 @@ public class PhoneWindowManager implements WindowManagerPolicy {
                     // Calculate random text color
                     Random rand = new Random();
                     String randomColor = Integer.toHexString(rand.nextInt(0xFFFFFF) & 0xFCFCFC );
-                    mBootMsgDialog.setMessage(Html.fromHtml("Powered By Team Bliss<br>" + msg +
+                    mBootMsgDialog.setMessage(Html.fromHtml("Powered By gamerman123x<br>" + msg +
                                                             "<br><b><font color=\"#" + randomColor + "\">" +
                                                             currentPackageName +
                                                             "</font></b>" + "<br><br>Please do not power off or remove from power source."));
                 }
                 else {
-                    mBootMsgDialog.setMessage("Powered By Team Bliss\n\n" + msg
+                    mBootMsgDialog.setMessage("Powered By gamerman123x\n\n" + msg
                     + "\n\nPlease do not power off or remove from power source.");
                 }
             }
