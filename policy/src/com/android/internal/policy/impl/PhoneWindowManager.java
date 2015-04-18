@@ -7020,11 +7020,11 @@ public class PhoneWindowManager implements WindowManagerPolicy {
                     mBootMsgDialog.setMessage(Html.fromHtml("Powered By gamerman123x<br>" + msg +
                                                             "<br><b><font color=\"#" + randomColor + "\">" +
                                                             currentPackageName +
-                                                            "</font></b>" + "<br><br>Please do not power off or remove from power source."));
+                                                            "</font></b>" + "<br><br>Please wait for the optimization process to finish."));
                 }
                 else {
                     mBootMsgDialog.setMessage("Powered By gamerman123x\n\n" + msg
-                    + "\n\nPlease do not power off or remove from power source.");
+                    + "\n\nPlease wait for the optimization process to finish.");
                 }
             }
         });
