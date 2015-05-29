@@ -22,7 +22,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.PowerManager;
 
-import com.android.internal.util.bliss.Action;
+import com.android.internal.util.razer.Action;
 
 public class Reboot extends Activity  {
 

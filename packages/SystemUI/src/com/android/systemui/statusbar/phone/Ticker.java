@@ -37,7 +37,7 @@ import android.widget.TextSwitcher;
 import android.widget.TextView;
 
 import com.android.internal.statusbar.StatusBarIcon;
-import com.android.internal.util.bliss.ImageHelper;
+import com.android.internal.util.razer.ImageHelper;
 import com.android.systemui.R;
 import com.android.systemui.statusbar.StatusBarIconView;
 

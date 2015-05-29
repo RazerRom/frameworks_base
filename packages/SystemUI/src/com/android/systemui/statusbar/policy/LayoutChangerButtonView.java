@@ -30,11 +30,11 @@ import android.view.View;
 import android.view.ViewConfiguration;
 import android.view.accessibility.AccessibilityEvent;
 
-import com.android.internal.util.bliss.KeyButtonInfo;
-import com.android.internal.util.bliss.NavbarUtils;
-import com.android.internal.util.bliss.NavbarConstants;
-import static com.android.internal.util.bliss.NavbarConstants.*;
-import com.android.internal.util.bliss.BlissActions;
+import com.android.internal.util.razer.KeyButtonInfo;
+import com.android.internal.util.razer.NavbarUtils;
+import com.android.internal.util.razer.NavbarConstants;
+import static com.android.internal.util.razer.NavbarConstants.*;
+import com.android.internal.util.razer.RazerActions;
 import com.android.systemui.R;
 
 public class LayoutChangerButtonView extends KeyButtonView {
@@ -146,6 +146,6 @@ public class LayoutChangerButtonView extends KeyButtonView {
         if (callOnClick()) {
             sendAccessibilityEvent(AccessibilityEvent.TYPE_VIEW_CLICKED);
         }
-        BlissActions.launchAction(mContext, mActions.singleAction);
+        RazerActions.launchAction(mContext, mActions.singleAction);
     }
 }

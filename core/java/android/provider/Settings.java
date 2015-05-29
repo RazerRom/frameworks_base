@@ -4324,16 +4324,16 @@ public final class Settings {
         public static final String DISABLE_FC_NOTIFICATIONS = "disable_fc_notifications";
 
         /**
-         * Statusbar Bliss logo
+         * Statusbar Razer logo
          * @hide
          */
-        public static final String STATUS_BAR_BLISS_LOGO = "status_bar_bliss_logo";
+        public static final String STATUS_BAR_RAZER_LOGO = "status_bar_razer_logo";
 
         /**
-         * Statusbar Bliss logo color setting
+         * Statusbar Razer logo color setting
          * @hide
          */
-        public static final String STATUS_BAR_BLISS_LOGO_COLOR = "status_bar_bliss_logo_color";
+        public static final String STATUS_BAR_RAZER_LOGO_COLOR = "status_bar_razer_logo_color";
 
         /**
          * Status bar greeting

@@ -39,7 +39,7 @@ import android.view.accessibility.AccessibilityEvent;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
-import com.android.internal.util.bliss.ColorHelper;
+import com.android.internal.util.razer.ColorHelper;
 
 import com.android.systemui.R;
 import com.android.systemui.statusbar.policy.NetworkControllerImpl;

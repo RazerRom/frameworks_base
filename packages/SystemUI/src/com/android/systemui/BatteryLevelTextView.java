@@ -30,7 +30,7 @@ import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.widget.TextView;
 
-import com.android.internal.util.bliss.ColorHelper;
+import com.android.internal.util.razer.ColorHelper;
 import com.android.systemui.cm.UserContentObserver;
 import com.android.systemui.statusbar.policy.BatteryController;
 

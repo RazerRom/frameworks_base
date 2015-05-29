@@ -46,13 +46,13 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/bliss_custom_label"
+            android:id="@+id/razer_custom_label"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:gravity="center"
             android:paddingStart="7dp"
             android:visibility="gone"
-            android:text="@string/bliss_label"
+            android:text="@string/razer_label"
             android:textAppearance="@style/TextAppearance.StatusBar.Clock" />
 
         <com.android.systemui.statusbar.AlphaOptimizedFrameLayout
@@ -92,11 +92,11 @@
                     android:textAppearance="@style/TextAppearance.StatusBar.WifiLabel" />
 
                 <ImageView
-                    android:id="@+id/bliss_logo"
+                    android:id="@+id/razer_logo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingEnd="4dip"
-                    android:src="@drawable/ic_status_bar_bliss_logo"
+                    android:src="@drawable/ic_status_bar_razer_logo"
                     android:scaleType="center"
                     android:visibility="gone" />
 

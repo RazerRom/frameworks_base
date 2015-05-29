@@ -149,7 +149,7 @@ import com.android.internal.util.cm.WeatherControllerImpl;
 import com.android.keyguard.KeyguardHostView.OnDismissAction;
 import com.android.keyguard.ViewMediatorCallback;
 import com.android.systemui.BatteryMeterView;
-import com.android.systemui.bliss.SearchPanelSwipeView;
+import com.android.systemui.razer.SearchPanelSwipeView;
 import com.android.systemui.BatteryLevelTextView;
 import com.android.systemui.DemoMode;
 import com.android.systemui.EventLogConstants;
@@ -352,7 +352,7 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
     // the icons themselves
     IconMerger mNotificationIcons;
     View mNotificationIconArea;
-    TextView mBlissLabel;
+    TextView mRazerLabel;
 
     // [+>
     View mMoreIcon;
@@ -404,10 +404,10 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
     private boolean mShowLabel;
     private int mShowLabelTimeout = 1000;
 
-    // Bliss logo
-    private boolean mBlissLogo;
-    private int mBlissLogoColor;
-    private ImageView blissLogo;
+    // Razer logo
+    private boolean mRazerLogo;
+    private int mRazerLogoColor;
+    private ImageView razerLogo;
 
     // Heads Up Custom Colors
     private int mHeadsUpCustomBg;
@@ -537,10 +537,10 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
                     Settings.System.STATUS_BAR_BATTERY_STATUS_TEXT_COLOR),
                     false, this, UserHandle.USER_ALL);
             resolver.registerContentObserver(Settings.System.getUriFor(
-                    Settings.System.STATUS_BAR_BLISS_LOGO),
+                    Settings.System.STATUS_BAR_RAZER_LOGO),
                     false, this, UserHandle.USER_ALL);
             resolver.registerContentObserver(Settings.System.getUriFor(
-                    Settings.System.STATUS_BAR_BLISS_LOGO_COLOR),
+                    Settings.System.STATUS_BAR_RAZER_LOGO_COLOR),
                     false, this, UserHandle.USER_ALL);
             resolver.registerContentObserver(Settings.System.getUriFor(
                     Settings.System.STATUS_BAR_SHOW_TICKER),
@@ -701,21 +701,21 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
                 mNavigationBarView.setLeftInLandscape(navLeftInLandscape);
             }
 
-            mBlissLogo = Settings.System.getIntForUser(resolver,
-                    Settings.System.STATUS_BAR_BLISS_LOGO,
+            mRazerLogo = Settings.System.getIntForUser(resolver,
+                    Settings.System.STATUS_BAR_RAZER_LOGO,
                     0, mCurrentUserId) == 1;
-            mBlissLogoColor = Settings.System.getIntForUser(resolver,
-                    Settings.System.STATUS_BAR_BLISS_LOGO_COLOR,
+            mRazerLogoColor = Settings.System.getIntForUser(resolver,
+                    Settings.System.STATUS_BAR_RAZER_LOGO_COLOR,
                     0xFFFFFFFF, mCurrentUserId);
-            showBlissLogo(mBlissLogo, mBlissLogoColor);
+            showRazerLogo(mRazerLogo, mRazerLogoColor);
 
             mGreeting = Settings.System.getStringForUser(resolver,
                     Settings.System.STATUS_BAR_GREETING,
                     mCurrentUserId);
-            if (mGreeting != null && mBlissLabel != null && !TextUtils.isEmpty(mGreeting)) {
-                mBlissLabel.setText(mGreeting);
+            if (mGreeting != null && mRazerLabel != null && !TextUtils.isEmpty(mGreeting)) {
+                mRazerLabel.setText(mGreeting);
             } else {
-                mBlissLabel.setText("");
+                mRazerLabel.setText("");
             }
             mShowLabelTimeout = Settings.System.getIntForUser(resolver,
                     Settings.System.STATUS_BAR_GREETING_TIMEOUT,
@@ -1220,7 +1220,7 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
         mNotificationIconArea = mStatusBarView.findViewById(R.id.notification_icon_area_inner);
         mNotificationIcons = (IconMerger)mStatusBarView.findViewById(R.id.notificationIcons);
         mMoreIcon = mStatusBarView.findViewById(R.id.moreIcon);
-        mBlissLabel = (TextView)mStatusBarView.findViewById(R.id.bliss_custom_label);
+        mRazerLabel = (TextView)mStatusBarView.findViewById(R.id.razer_custom_label);
         mNotificationIcons.setOverflowIndicator(mMoreIcon);
         mStatusBarContents = (LinearLayout)mStatusBarView.findViewById(R.id.status_bar_contents);
         mBatteryView = (BatteryMeterView) mStatusBarView.findViewById(R.id.battery);
@@ -2890,12 +2890,12 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
                 }
                 animateStatusBarHide(mNotificationIconArea, animate);
             } else {
-                if (mGreeting != null && mBlissLabel != null
+                if (mGreeting != null && mRazerLabel != null
                     && !TextUtils.isEmpty(mGreeting) && mShowLabel) {
                     if (animate) {
-                        mBlissLabel.setVisibility(View.VISIBLE);
-                        mBlissLabel.animate().cancel();
-                        mBlissLabel.animate()
+                        mRazerLabel.setVisibility(View.VISIBLE);
+                        mRazerLabel.animate().cancel();
+                        mRazerLabel.animate()
                                 .alpha(1f)
                                 .setDuration(mShowLabelTimeout)
                                 .setInterpolator(ALPHA_IN)
@@ -2984,11 +2984,11 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
     }
 
     protected void labelAnimatorFadeOut(final boolean animate) {
-        if (mBlissLabel == null) {
+        if (mRazerLabel == null) {
             return;
         }
-        mBlissLabel.animate().cancel();
-        mBlissLabel.animate()
+        mRazerLabel.animate().cancel();
+        mRazerLabel.animate()
                 .alpha(0f)
                 .setDuration(200)
                 .setStartDelay(1200)
@@ -2996,7 +2996,7 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
                 .withEndAction(new Runnable() {
             @Override
             public void run() {
-                mBlissLabel.setVisibility(View.GONE);
+                mRazerLabel.setVisibility(View.GONE);
                 animateStatusBarShow(mNotificationIconArea, animate);
             }
         });
@@ -4311,12 +4311,12 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
         }
     };
 
-    public void showBlissLogo(boolean show, int color) {
+    public void showRazerLogo(boolean show, int color) {
         if (mStatusBarView == null) return;
-        blissLogo = (ImageView) mStatusBarView.findViewById(R.id.bliss_logo);
-        blissLogo.setColorFilter(color, Mode.SRC_IN);
-        if (blissLogo != null) {
-            blissLogo.setVisibility(show && mBlissLogo ? View.VISIBLE : View.GONE);
+        razerLogo = (ImageView) mStatusBarView.findViewById(R.id.razer_logo);
+        razerLogo.setColorFilter(color, Mode.SRC_IN);
+        if (razerLogo != null) {
+            razerLogo.setVisibility(show && mRazerLogo ? View.VISIBLE : View.GONE);
         }
     }
 

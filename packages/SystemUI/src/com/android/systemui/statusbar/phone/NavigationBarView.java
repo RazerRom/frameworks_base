@@ -16,7 +16,7 @@
 
 package com.android.systemui.statusbar.phone;
 
-import static com.android.internal.util.bliss.NavbarConstants.*;
+import static com.android.internal.util.razer.NavbarConstants.*;
 
 import android.animation.Animator;
 import android.animation.AnimatorSet;
@@ -65,9 +65,9 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Space;
 
-import com.android.internal.util.bliss.KeyButtonInfo;
-import com.android.internal.util.bliss.NavbarConstants;
-import com.android.internal.util.bliss.NavbarUtils;
+import com.android.internal.util.razer.KeyButtonInfo;
+import com.android.internal.util.razer.NavbarConstants;
+import com.android.internal.util.razer.NavbarUtils;
 
 import com.android.systemui.R;
 import com.android.systemui.cm.UserContentObserver;

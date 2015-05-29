@@ -64,14 +64,14 @@ import java.lang.Math;
 import java.util.ArrayList;
 
 import com.android.internal.statusbar.IStatusBarService;
-import com.android.internal.util.bliss.BlissActions;
-import com.android.internal.util.bliss.KeyButtonInfo;
-import com.android.internal.util.bliss.NavbarUtils;
+import com.android.internal.util.razer.RazerActions;
+import com.android.internal.util.razer.KeyButtonInfo;
+import com.android.internal.util.razer.NavbarUtils;
 import com.android.systemui.R;
 
-import com.bliss.util.DeviceUtils;
+import com.razer.util.DeviceUtils;
 
-import static com.android.internal.util.bliss.NavbarConstants.*;
+import static com.android.internal.util.razer.NavbarConstants.*;
 
 import static android.view.accessibility.AccessibilityNodeInfo.ACTION_CLICK;
 import static android.view.accessibility.AccessibilityNodeInfo.ACTION_LONG_CLICK;
@@ -346,21 +346,21 @@ public class KeyButtonView extends ImageView {
             sendAccessibilityEvent(AccessibilityEvent.TYPE_VIEW_CLICKED);
         }
         if (mHasSingleAction) {
-            BlissActions.launchAction(mContext, mActions.singleAction);
+            RazerActions.launchAction(mContext, mActions.singleAction);
         }
     }
 
     private void doDoubleTap() {
         if (mHasDoubleAction) {
             removeCallbacks(mSingleTap);
-            BlissActions.launchAction(mContext, mActions.doubleTapAction);
+            RazerActions.launchAction(mContext, mActions.doubleTapAction);
         }
     }
 
     protected void doLongPress() {
         if (mHasLongAction) {
             removeCallbacks(mSingleTap);
-            BlissActions.launchAction(mContext, mActions.longPressAction);
+            RazerActions.launchAction(mContext, mActions.longPressAction);
             performHapticFeedback(HapticFeedbackConstants.VIRTUAL_KEY);
             sendAccessibilityEvent(AccessibilityEvent.TYPE_VIEW_LONG_CLICKED);
         }
@@ -370,7 +370,7 @@ public class KeyButtonView extends ImageView {
         @Override
         public void run() {
             if (mIsDPadAction) {
-                BlissActions.launchAction(mContext, mActions.singleAction);
+                RazerActions.launchAction(mContext, mActions.singleAction);
                 // click on the first event since we're handling in MotionEvent.ACTION_DOWN
                 if (mShouldClick) {
                     mShouldClick = false;

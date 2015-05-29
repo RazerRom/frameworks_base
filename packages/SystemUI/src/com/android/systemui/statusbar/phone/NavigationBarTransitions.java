@@ -25,7 +25,7 @@ import android.view.View;
 import android.view.animation.AccelerateInterpolator;
 
 import com.android.internal.statusbar.IStatusBarService;
-import com.android.internal.util.bliss.NavbarConstants.NavbarConstant;
+import com.android.internal.util.razer.NavbarConstants.NavbarConstant;
 import com.android.systemui.R;
 import com.android.systemui.statusbar.policy.KeyButtonView;
 

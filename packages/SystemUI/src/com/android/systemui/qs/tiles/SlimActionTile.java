@@ -24,10 +24,10 @@ import android.net.Uri;
 import android.provider.Settings;
 import com.android.systemui.qs.QSTile;
 
-import com.android.internal.util.bliss.Action;
-import com.android.internal.util.bliss.ActionConfig;
-import com.android.internal.util.bliss.ActionConstants;
-import com.android.internal.util.bliss.ActionHelper;
+import com.android.internal.util.razer.Action;
+import com.android.internal.util.razer.ActionConfig;
+import com.android.internal.util.razer.ActionConstants;
+import com.android.internal.util.razer.ActionHelper;
 
 import java.util.ArrayList;
 

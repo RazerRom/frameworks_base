@@ -21,8 +21,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.UserHandle;
 
-import com.android.internal.util.bliss.ActionConstants;
-import com.android.internal.util.bliss.Action;
+import com.android.internal.util.razer.ActionConstants;
+import com.android.internal.util.razer.Action;
 
 public class Torch extends Activity  {
 
