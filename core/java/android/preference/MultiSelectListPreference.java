@@ -249,6 +249,19 @@ public class MultiSelectListPreference extends DialogPreference {
         return myState;
     }
 
+    @Override
+    protected void onRestoreInstanceState(Parcelable state) {
+        if (!state.getClass().equals(SavedState.class)) {
+            // Didn't save state for us in onSaveInstanceState
+            super.onRestoreInstanceState(state);
+            return;
+        }
+
+        SavedState myState = (SavedState) state;
+        super.onRestoreInstanceState(myState.getSuperState());
+        setValues(myState.values);
+    }
+
     private static class SavedState extends BaseSavedState {
         Set<String> values;
 
