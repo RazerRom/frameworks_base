@@ -5366,6 +5366,7 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
         }
         mState = state;
         mStatusBarWindowManager.setStatusBarState(state);
+        logStateToEventlog();
     }
 
     @Override
