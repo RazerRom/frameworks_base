@@ -68,9 +68,11 @@ import java.io.File;
 import java.lang.Math;
 import java.util.ArrayList;
 
+
 import com.android.internal.statusbar.IStatusBarService;
 import com.android.internal.util.razer.RazerActions;
 import com.android.internal.util.razer.KeyButtonInfo;
+import com.android.internal.util.razer.NavbarConstants;
 import com.android.internal.util.razer.NavbarUtils;
 import com.android.systemui.R;
 
@@ -210,6 +212,7 @@ public class KeyButtonView extends ImageView {
             }
         } else if (mHasSingleAction) {
             if (mIsLandscape && !mTablet) {
+                NavbarConstants.useSystemUI = false;
                 setImageDrawable(NavbarUtils.getLandscapeIconImage(mContext, mActions.singleAction));
             } else {
                 setImageDrawable(NavbarUtils.getIconImage(mContext, mActions.singleAction));
