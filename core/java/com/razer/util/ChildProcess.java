@@ -1,4 +1,4 @@
-package com.bliss.util;
+package com.razer.util;
 
 import android.os.Environment;
 import android.util.Log;

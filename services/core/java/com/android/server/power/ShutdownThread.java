@@ -71,7 +71,7 @@ import java.io.OutputStreamWriter;
 
 import java.lang.reflect.Method;
 
-import com.bliss.util.Helpers;
+import com.razer.util.Helpers;
 
 public final class ShutdownThread extends Thread {
     // constants
