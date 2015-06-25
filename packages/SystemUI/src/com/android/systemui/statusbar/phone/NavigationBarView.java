@@ -1463,6 +1463,7 @@ public class NavigationBarView extends LinearLayout {
         if (mRot90 != null) {
             mRot90.setForeground(drawable);
         }
+	}
 
     private void updateSettings() {
         ContentResolver resolver = mContext.getContentResolver();
