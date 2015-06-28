@@ -19905,9 +19905,7 @@ public class View implements Drawable.Callback, KeyEvent.Callback,
 
     /** @hide */
     public void hackTurnOffWindowResizeAnim(boolean off) {
-        if (mAttachInfo != null) {
-            mAttachInfo.mTurnOffWindowResizeAnim = off;
-        }
+        mAttachInfo.mTurnOffWindowResizeAnim = off;
     }
 
     /**
