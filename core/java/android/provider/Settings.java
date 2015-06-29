@@ -4930,12 +4930,6 @@ public final class Settings {
         public static final String STATUS_BAR_POWER_MENU = "status_bar_power_menu";
 
         /**
-         * Show four g instead of lte
-         * @hide
-         */
-        public static final String SHOW_FOURG = "show_fourg";
-
-        /**
          * Wether to show a headsup enable/disable button in status bar header
          *
          * @hide
