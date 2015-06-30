@@ -75,7 +75,6 @@ import android.graphics.Rect;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.inputmethodservice.InputMethodService;
-import android.net.Uri;
 import android.media.AudioAttributes;
 import android.media.MediaMetadata;
 import android.media.session.MediaController;
@@ -4303,8 +4302,8 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
     public void showRazerLogo(boolean show, int color) {
         if (mStatusBarView == null) return;
         razerLogo = (ImageView) mStatusBarView.findViewById(R.id.razer_logo);
-        razerLogo.setColorFilter(color, Mode.SRC_IN);
         if (razerLogo != null) {
+			razerLogo.setColorFilter(color, Mode.SRC_IN);
             razerLogo.setVisibility(show && mRazerLogo ? View.VISIBLE : View.GONE);
         }
     }
