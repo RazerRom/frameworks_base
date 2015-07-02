@@ -17,6 +17,9 @@
 package com.android.internal.util.razer;
 
 import android.content.Context;
+import android.content.res.Resources;
+
+import java.util.Locale;
 
 public class razerUtils {
 
@@ -24,4 +27,10 @@ public class razerUtils {
         return context.getResources().getBoolean(
                 com.android.internal.R.bool.config_showNavigationBar);
     }
+
+    public static boolean isChineseLanguage() {
+       return Resources.getSystem().getConfiguration().locale.getLanguage().startsWith(
+               Locale.CHINESE.getLanguage());
+    }
+
 }
