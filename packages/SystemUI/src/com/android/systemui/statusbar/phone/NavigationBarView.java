@@ -618,7 +618,7 @@ public class NavigationBarView extends LinearLayout {
             if (colorize && mNavBarButtonColorMode != 3) {
                 d = ColorHelper.getColoredDrawable(d, mNavBarButtonColor);
             }
-            v.setImageDrawable(d);
+            v.setImageBitmap(ColorHelper.drawableToBitmap(d));
         }
         v.setRippleColor(mRippleColor);
         return v;
@@ -981,10 +981,8 @@ public class NavigationBarView extends LinearLayout {
             } else {
                 d = ColorHelper.getColoredDrawable(d, mNavBarButtonColor);
             }
-            v.setImageDrawable(d);
-        } else {
-            v.setImageDrawable(d);
         }
+        v.setImageBitmap(ColorHelper.drawableToBitmap(d));
         v.setRippleColor(mRippleColor);
 
         return v;
