@@ -54,8 +54,8 @@ import android.view.accessibility.AccessibilityEvent;
 import android.view.accessibility.AccessibilityNodeInfo;
 import android.widget.ImageView;
 
-import com.android.internal.util.bliss.ActionConstants;
-import com.android.internal.util.bliss.Action;
+import com.android.internal.util.razer.ActionConstants;
+import com.android.internal.util.razer.Action;
 
 import com.android.systemui.R;
 import com.android.systemui.statusbar.phone.NavigationBarView;
