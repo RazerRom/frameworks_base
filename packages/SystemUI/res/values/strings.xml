@@ -936,7 +936,4 @@
 
     <!-- Power Button for Navbar -->
     <string name="navbar_power_button">Power button</string>
-
-    <!-- Battery Saver Dimiss -->
-    <string name="battery_saver_dismiss_title">Dismiss</string>
 </resources>
