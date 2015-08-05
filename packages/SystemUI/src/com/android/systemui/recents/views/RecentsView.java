@@ -44,7 +44,7 @@ import android.widget.FrameLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import com.android.internal.util.bliss.ColorHelper;
+import com.android.internal.util.razer.ColorHelper;
 
 import com.android.systemui.recents.Constants;
 import com.android.systemui.recents.RecentsConfiguration;

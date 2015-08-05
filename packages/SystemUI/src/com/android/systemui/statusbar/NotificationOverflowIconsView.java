@@ -28,7 +28,7 @@ import android.widget.TextView;
 
 import com.android.internal.statusbar.StatusBarIcon;
 import com.android.internal.util.NotificationColorUtil;
-import com.android.internal.util.bliss.NotificationColorHelper;
+import com.android.internal.util.razer.NotificationColorHelper;
 import com.android.systemui.R;
 import com.android.systemui.statusbar.phone.IconMerger;
 

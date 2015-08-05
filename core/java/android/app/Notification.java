@@ -50,7 +50,7 @@ import android.widget.RemoteViews;
 
 import com.android.internal.R;
 import com.android.internal.util.NotificationColorUtil;
-import com.android.internal.util.bliss.NotificationColorHelper;
+import com.android.internal.util.razer.NotificationColorHelper;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

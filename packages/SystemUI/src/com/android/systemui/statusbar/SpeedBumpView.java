@@ -24,8 +24,8 @@ import android.util.AttributeSet;
 import android.view.animation.AnimationUtils;
 import android.view.animation.Interpolator;
 
-import com.android.internal.util.bliss.ColorHelper;
-import com.android.internal.util.bliss.NotificationColorHelper;
+import com.android.internal.util.razer.ColorHelper;
+import com.android.internal.util.razer.NotificationColorHelper;
 
 import com.android.systemui.R;
 

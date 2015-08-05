@@ -53,7 +53,7 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.AdapterView.OnItemClickListener;
 
-import com.android.internal.util.bliss.ColorHelper;
+import com.android.internal.util.razer.ColorHelper;
 
 import libcore.util.Objects;
 

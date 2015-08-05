@@ -14,7 +14,7 @@
 * limitations under the License.
 */
 
-package com.android.internal.util.bliss;
+package com.android.internal.util.razer;
 
 import android.app.Notification;
 import android.content.Context;
@@ -23,7 +23,7 @@ import android.graphics.drawable.Drawable;
 import android.provider.Settings;
 
 import com.android.internal.util.NotificationColorUtil;
-import com.android.internal.util.bliss.ColorHelper;
+import com.android.internal.util.razer.ColorHelper;
 
 public class NotificationColorHelper {
 

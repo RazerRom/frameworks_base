@@ -9,8 +9,7 @@
 		<color name="system_secondary_color">@*android:color/theme_color_qs_header</color>
 		<color name="system_accent_color">@*android:color/theme_color_accent_dark</color>
 		
-	<!--Bliss Gerrit ID: I8ccefddf5eb2d38297f385a7ea83752162a7c563-->
-		<!--QS Background-->
+	<!--QS Background-->
 		<color name="qs_background_drawable_color">@color/system_primary_background</color>
 		
 	<!--Quick Settings in Notification drawer -->	

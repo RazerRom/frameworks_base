@@ -40,8 +40,8 @@ import android.view.animation.Interpolator;
 import android.view.animation.LinearInterpolator;
 import android.view.animation.PathInterpolator;
 
-import com.android.internal.util.bliss.ColorHelper;
-import com.android.internal.util.bliss.NotificationColorHelper;
+import com.android.internal.util.razer.ColorHelper;
+import com.android.internal.util.razer.NotificationColorHelper;
 
 import com.android.systemui.R;
 import com.android.systemui.ViewInvertHelper;
