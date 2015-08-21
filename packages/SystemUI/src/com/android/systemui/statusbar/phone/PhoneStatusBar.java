@@ -1247,7 +1247,7 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
     }
 
     public void enableShake(boolean enableShakeClean) {
-        if (enableShakeClean && enableShakeCleanByUser && mScreenOnFromKeyguard) {
+        if (enableShakeClean && mScreenOnFromKeyguard) {
             mShakeSensorManager.enable(20);
         } else {
             mShakeSensorManager.disable();
@@ -3400,7 +3400,7 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
         }
 
         mExpandedVisible = true;
-        enableShake(true);
+        enableShake(true && enableShakeCleanByUser);
         if (mNavigationBarView != null)
             mNavigationBarView.setSlippery(true);
 
@@ -3550,6 +3550,7 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
 
         if (false) postStartTracing();
     }
+
     @Override
     public void animateExpandSettingsPanel() {
         if (SPEW) Log.d(TAG, "animateExpand: mExpandedVisible=" + mExpandedVisible);
